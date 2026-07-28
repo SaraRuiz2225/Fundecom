@@ -1,0 +1,14 @@
+node_modules/
+dist/
+tmp/
+backups/
+qa-screens/
+
+.env
+.env.local
+
+*.log
+*.zip
+
+.DS_Store
+Thumbs.db

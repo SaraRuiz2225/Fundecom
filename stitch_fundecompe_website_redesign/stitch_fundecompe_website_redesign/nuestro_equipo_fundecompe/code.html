@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#50bdff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#dce9ff",
+                    "secondary-fixed": "#7dfd8f",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-fixed-variant": "#00531d",
+                    "on-secondary-fixed": "#002107",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-container": "#7dfd8f",
+                    "tertiary": "#00334c",
+                    "secondary-fixed-dim": "#60df76",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary-fixed-dim": "#8aceff",
+                    "outline-variant": "#c4c6d5",
+                    "primary-fixed": "#dbe1ff",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed": "#c9e6ff",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-container": "#004a6d",
+                    "on-primary-fixed": "#00174b",
+                    "surface-dim": "#cbdbf5",
+                    "surface": "#f8f9ff",
+                    "on-secondary-container": "#00752c",
+                    "error-container": "#ffdad6",
+                    "on-background": "#0b1c30",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "primary-container": "#003da5",
+                    "on-surface": "#0b1c30",
+                    "secondary": "#006e29",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#033ea6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "on-surface-variant": "#434653",
+                    "primary": "#002975",
+                    "on-tertiary-fixed-variant": "#004b6f",
+                    "on-primary-container": "#98b1ff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "outline": "#747684",
+                    "inverse-primary": "#b4c5ff",
+                    "on-tertiary-fixed": "#001e2f",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#2d58bf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "section-gap": "80px",
+                    "margin": "32px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "h3": ["Lexend"],
+                    "h1": ["Lexend"],
+                    "h2": ["Lexend"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin py-4 max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary">Fundecompe</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#">Inicio</a>
+<a class="text-primary border-b-2 border-primary font-bold pb-1 font-body-md text-body-md" href="#">Equipo</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#">Servicios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#">Programas</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md text-body-md" href="#">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:bg-primary-container transition-all active:opacity-80 active:scale-95">
+                Agendar Cita
+            </button>
+</nav>
+</header>
+<main class="pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin mb-section-gap text-center">
+<span class="text-secondary font-label-caps uppercase tracking-widest mb-4 block">Nuestro Capital Humano</span>
+<h1 class="font-h1 text-h1 text-primary mb-6 max-w-3xl mx-auto">Excelencia Técnica con Sensibilidad Humana</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                En Fundecompe, reunimos a líderes visionarios y expertos técnicos comprometidos con la consultoría ética y el desarrollo sostenible de nuestras comunidades.
+            </p>
+</section>
+<!-- Team Grid -->
+<section class="max-w-container-max mx-auto px-margin">
+<!-- Leadership Bento-style -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-gutter">
+<!-- Director Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 border border-outline-variant shadow-sm flex flex-col md:flex-row gap-8 items-center overflow-hidden">
+<div class="w-full md:w-1/2 aspect-square rounded-lg overflow-hidden shrink-0">
+<img alt="Director Ejecutivo" class="w-full h-full object-cover" data-alt="A professional portrait of a senior male executive in a well-tailored navy suit, standing in a brightly lit modern office with glass walls. The lighting is soft and natural, emphasizing a look of experienced leadership and approachability. The background is slightly blurred, focusing on his warm but firm expression, aligning with an institutional and trustworthy corporate aesthetic. The color palette consists of clean whites, deep blues, and subtle gray tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDZ605o4lxE0l6MYMPbkrBEOgJbH6X-1PqILsBFBoNMGt7KRg-Z7UScXMNu8lfYK9TGzCLbYbh6Fu6Us6qopnibob067mdL4xSeOBAseZuMpUK7lBmIxPNhwNLrl_Nh4z6ezLQ8vYhrf154UayIqi5kuzgNMw2Ogn0Tl8ARX2uisd42Qh8Xb1qmUQnCOHrrJIWxe7gVrf6Ltm-C4m5sTNMADZgoDeTE5C7TmtHjwDoYmr5X4hDFsAdiRucohradG26qG_r9_NCsWo"/>
+</div>
+<div class="flex flex-col justify-center">
+<h2 class="font-h2 text-h2 text-primary mb-2">Dr. Alejandro Vargas</h2>
+<span class="text-secondary font-semibold mb-4 block">Director Ejecutivo</span>
+<p class="text-on-surface-variant mb-6">Con más de 20 años de trayectoria en el sector educativo y gubernamental, el Dr. Vargas lidera nuestra visión estratégica con un enfoque inquebrantable en la transparencia y el impacto social medible.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">link</span>
+</div>
+</div>
+</div>
+<!-- Sub-Director Card -->
+<div class="md:col-span-4 bg-primary text-on-primary rounded-xl p-8 border border-primary-container shadow-md flex flex-col justify-between">
+<div>
+<div class="w-24 h-24 rounded-full overflow-hidden mb-6 border-4 border-on-primary-container">
+<img alt="Directora de Operaciones" class="w-full h-full object-cover" data-alt="A professional headshot of a confident female executive with a friendly smile, set against a clean, light-colored architectural background. She is wearing a professional charcoal blazer. The lighting is high-key and flattering, conveying intelligence and warmth. The overall style is modern corporate, maintaining the brand's primary blue and white theme through professional attire and setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBffYd7-7Agg02cd7NpF6dvLk5ug5ZAHsIQW4-1kJ0ULFyY8PmYQ92p4QEvhFuz6EnBTJpyOQq7MrGw1VBgtSqiOq_nu3Xd8pbwbkbcDcwk3rejqvcW3uUmzaLkx_tw2vwzqgNqTZdXfPVtF7SBwIMhHu-uJkkQ3koyKSJV0N-Wjpx3NaNTpVlvV3P2oaQGupx3Ac22OOLReTy71yG-nm7rSgx1PMLPhFqxZaEeyUzbBbRoiZQDGIahjOC68d8D7GmdtFQVQDwqFmI"/>
+</div>
+<h3 class="font-h3 text-h3 mb-1">MSc. Elena Rivas</h3>
+<span class="text-on-primary-container font-semibold block mb-4">Dir. de Operaciones</span>
+<p class="text-primary-fixed-dim text-sm italic">"La eficiencia operativa es el puente entre una gran idea y un cambio real en la comunidad."</p>
+</div>
+<div class="mt-6 pt-6 border-t border-on-primary-container/30">
+<p class="text-xs font-label-caps opacity-80 uppercase">Especialidad</p>
+<p class="font-semibold">Gestión de Proyectos Macro</p>
+</div>
+</div>
+</div>
+<!-- Consultant Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Consultant 1 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant p-6 hover:shadow-lg transition-all duration-300 group">
+<div class="aspect-[4/5] rounded-lg overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Consultor Técnico" class="w-full h-full object-cover" data-alt="A medium shot of a male professional in business casual attire, sitting in a modern co-working space with soft bokeh background. He looks thoughtful and engaged, representing technical expertise and consultancy. The image is bright and uses a palette of soft blues and neutrals, fitting the corporate light-mode design system. Lighting is clean and balanced, highlighting professional competence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6ykjqD1b1gJQ4uGCTJ7oGOSpZXFZFElydlEwyqrvnbc4FFadcHe9F2_wfT5T7UHj1qPTsqmX5nXsy3HeMN8MIcHvniaC3p_HLSR7I7KfmYwmsuK_wI2liW2B0-AOG_6X8VQQMOSRwRjZMWUb2smNiYq3qjigSxN_YDsoXqVKUzCrwrzctg2-9T9_g6oPYTHSfizlLLM0-MuSaXIxMEpk5XYb97iLM1XpOq7dLCJCA_mXOxphkyLdE4dBr3oGf1Rj532436tQ5Qmc"/>
+</div>
+<h4 class="font-h3 text-[20px] text-primary mb-1">Ing. Roberto Méndez</h4>
+<span class="text-secondary-container bg-secondary/10 px-2 py-0.5 rounded text-xs font-bold mb-4 inline-block text-secondary">Consultor Senior</span>
+<p class="text-sm text-on-surface-variant line-clamp-3">Especialista en infraestructura educativa y desarrollo de software para gestión de recursos institucionales.</p>
+</div>
+<!-- Consultant 2 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant p-6 hover:shadow-lg transition-all duration-300 group">
+<div class="aspect-[4/5] rounded-lg overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Asesora Pedagógica" class="w-full h-full object-cover" data-alt="A portrait of a smiling female professional in a modern office setting. She has a look of expertise and compassion, dressed in a professional ivory blouse. The background features light-filled windows and greenery, creating an atmosphere of growth and institutional warmth. The color tones are soft, consistent with a professional light-mode aesthetic, utilizing clean whites and muted corporate colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFBwC37Erp1lkVGMrVg9kWwy-4bYorwkZ4VwEvica0FO4ymxhrTgD8DLmy1IyWDro8jqa3vy7k_TBJvxiPnfaC9rc0kd8fm_RlvD7WNJAqmFPWIaBNb3cx95SgdSg7aLJPdBeEZlC4uZqrlZDH9L8lnthCoWbEbWsudNnYisA9xMVJVSyODXAlhA2bWR_bY2eYUUi-cdaoYIru-52u3r0G6GPQjpZg6w2Kdhl8kPrjNbihn_flBPunrcAYshCvYrDX9j_F-lvAXws"/>
+</div>
+<h4 class="font-h3 text-[20px] text-primary mb-1">Dra. Claudia Ortiz</h4>
+<span class="text-secondary-container bg-secondary/10 px-2 py-0.5 rounded text-xs font-bold mb-4 inline-block text-secondary">Asesora Pedagógica</span>
+<p class="text-sm text-on-surface-variant line-clamp-3">Experta en diseño curricular y metodologías de aprendizaje activo para programas de formación docente continua.</p>
+</div>
+<!-- Consultant 3 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant p-6 hover:shadow-lg transition-all duration-300 group">
+<div class="aspect-[4/5] rounded-lg overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Analista Financiero" class="w-full h-full object-cover" data-alt="Close up portrait of a male specialist with glasses, wearing a sharp grey suit against a minimalist light grey background. He looks focused and precise, embodying financial and strategic planning expertise. High-key lighting ensures the image remains bright and clean, perfectly aligned with a professional corporate design system. The mood is one of serious, reliable institutional support." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK8-YwA-9E9UEG5V318Itb5b2p4oWm5h9NerJHkLG7Uq_PRtch2aLD4b9TeNogASXwqn7r9aFAJ3uFWxy0ZPhOvbWTp_6YjA3QEKvlkARdhdvToyz7BJDaHcwpPABnQoXFMILXm8yFF-b9MI5Ta9yZlov67UkAbL8qqMxiOqWefX-YJRoSEdcBq2knEknwRw83kUL4o3vve1rXa-26x3Og8ZW07Hy7natkjbz-QbBDnGLak65dd7x-PpPhawubcJGopjbHvqHjHSo"/>
+</div>
+<h4 class="font-h3 text-[20px] text-primary mb-1">Lic. Marcos Duarte</h4>
+<span class="text-secondary-container bg-secondary/10 px-2 py-0.5 rounded text-xs font-bold mb-4 inline-block text-secondary">Analista Financiero</span>
+<p class="text-sm text-on-surface-variant line-clamp-3">Encargado de la sostenibilidad económica de los proyectos y auditoría de transparencia de fondos internacionales.</p>
+</div>
+<!-- Consultant 4 -->
+<div class="bg-surface-container-low rounded-xl border border-outline-variant p-6 hover:shadow-lg transition-all duration-300 group">
+<div class="aspect-[4/5] rounded-lg overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img alt="Coord. Comunitaria" class="w-full h-full object-cover" data-alt="A high-quality professional portrait of a woman in a modern architectural lobby. She is wearing a professional teal blazer that complements the brand's cyan accents. Her expression is welcoming yet professional. The lighting is diffused and bright, creating a high-end institutional feel. The background is clean and organized, reinforcing a sense of structured excellence and communal support." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUsSrY5v1bxtAYGq-hw7HN9C3LbEeYyCh7a87nww8bHLKbG2lCiz1vLN9GaXDaTHsHWjXmaSdw_l2gQf0EKmVvTp9EcWSevZGvpEIFY7x9TEyhusduTmmvAPM4zH69HtJ-QJwwGKfDCSNpBgVKqyp5sRsxNJc3T8yRHuubMUH3oHMikNBxydYp3gNRxcejm0ngV6nS0NmrV9Q6b8jvjYci3dRe_cRflKdKpkqew3XdRW6wMolPrTBIE9OHhkmfL2Stt7fC6rSwsYg"/>
+</div>
+<h4 class="font-h3 text-[20px] text-primary mb-1">Psic. Ana Sofía Gil</h4>
+<span class="text-secondary-container bg-secondary/10 px-2 py-0.5 rounded text-xs font-bold mb-4 inline-block text-secondary">Coord. Comunitaria</span>
+<p class="text-sm text-on-surface-variant line-clamp-3">Líder en vinculación social, experta en diagnóstico de necesidades locales y participación ciudadana inclusiva.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-section-gap max-w-container-max mx-auto px-margin">
+<div class="bg-tertiary rounded-xl p-12 text-center text-on-tertiary shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="font-h2 text-h2 mb-4">¿Te gustaría ser parte de nuestra red de expertos?</h2>
+<p class="max-w-2xl mx-auto mb-8 opacity-90">Buscamos constantemente profesionales apasionados por el cambio social y la excelencia técnica para unirse a nuestros proyectos de consultoría.</p>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-lg font-bold hover:bg-on-secondary-container transition-all active:scale-95 flex items-center gap-2 mx-auto">
+                        Ver Vacantes
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-tertiary border-t border-outline-variant w-full rounded-none">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin py-section-gap max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-h3 text-h3 font-bold text-primary dark:text-tertiary-fixed-dim">Fundecompe</div>
+<p class="text-on-surface-variant dark:text-on-tertiary-fixed-variant text-sm">Empoderando comunidades a través de la consultoría estratégica y el desarrollo educativo integral.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-on-surface dark:text-on-tertiary uppercase text-xs tracking-widest">Legal</h4>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary transition-colors" href="#">Políticas de Privacidad</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary transition-colors" href="#">Términos de Servicio</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-on-surface dark:text-on-tertiary uppercase text-xs tracking-widest">Soporte</h4>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary transition-colors" href="#">Líneas de Atención</a>
+<a class="text-on-surface-variant dark:text-on-tertiary-fixed-variant hover:text-secondary transition-colors" href="#">Preguntas Frecuentes</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-on-surface dark:text-on-tertiary uppercase text-xs tracking-widest">Contacto</h4>
+<p class="text-on-surface-variant dark:text-on-tertiary-fixed-variant text-sm">
+                    Calle de la Innovación #123<br/>
+                    Distrito Central, CP 45000<br/>
+                    contacto@fundecompe.org
+                </p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin py-6 border-t border-outline-variant/30 text-center md:text-left">
+<p class="text-xs text-on-surface-variant dark:text-on-tertiary-fixed-variant">© 2024 Fundecompe. Todos los derechos reservados. Consultoría y Desarrollo para el Progreso.</p>
+</div>
+</footer>
+</body></html>

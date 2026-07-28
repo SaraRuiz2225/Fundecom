@@ -1,0 +1,8 @@
+services:
+  fundecompe-web:
+    build:
+      context: .
+    ports:
+      - "8080:80"
+    environment:
+      FORMS_ENDPOINT: ${FORMS_ENDPOINT:-}

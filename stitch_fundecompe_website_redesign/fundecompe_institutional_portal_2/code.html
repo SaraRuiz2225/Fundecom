@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#50bdff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#dce9ff",
+                    "secondary-fixed": "#7dfd8f",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-fixed-variant": "#00531d",
+                    "on-secondary-fixed": "#002107",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-container": "#7dfd8f",
+                    "tertiary": "#00334c",
+                    "secondary-fixed-dim": "#60df76",
+                    "surface-container-highest": "#d3e4fe",
+                    "tertiary-fixed-dim": "#8aceff",
+                    "outline-variant": "#c4c6d5",
+                    "primary-fixed": "#dbe1ff",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "tertiary-fixed": "#c9e6ff",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-container": "#004a6d",
+                    "on-primary-fixed": "#00174b",
+                    "surface-dim": "#cbdbf5",
+                    "surface": "#f8f9ff",
+                    "on-secondary-container": "#00752c",
+                    "error-container": "#ffdad6",
+                    "on-background": "#0b1c30",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#213145",
+                    "primary-container": "#003da5",
+                    "on-surface": "#0b1c30",
+                    "secondary": "#006e29",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#033ea6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "on-surface-variant": "#434653",
+                    "primary": "#002975",
+                    "on-tertiary-fixed-variant": "#004b6f",
+                    "on-primary-container": "#98b1ff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "outline": "#747684",
+                    "inverse-primary": "#b4c5ff",
+                    "on-tertiary-fixed": "#001e2f",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#2d58bf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "section-gap": "80px",
+                    "margin": "32px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "h3": ["Lexend"],
+                    "h1": ["Lexend"],
+                    "h2": ["Lexend"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["36px", {"lineHeight": "1.25", "fontWeight": "600"}]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9ff;
+            color: #0b1c30;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin py-4 max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary">Fundecompe</div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary font-bold pb-1" href="#">Inicio</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Equipo</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Servicios</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Programas</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-semibold hover:opacity-90 active:scale-95 transition-all">
+                Agendar Cita
+            </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A professional and modern corporate office environment with high ceilings and glass walls. The lighting is bright and natural, creating a light-mode aesthetic that conveys transparency and institutional trust. Sophisticated professionals are subtly visible in the background, working in a collaborative and focused manner. The color palette is dominated by soft whites and professional blues, reflecting a calm and purposeful atmosphere for consulting and development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCdD-RaVs-_NpswEGycgrvonkDGb3xFirRndVzx4ZZdRYAUUg9beT_ev_l9uPqq1-YrCHRqKbo1lTPcjEu3u1V6g6nIei6nHs0eJAgcZL_TG-vbneGiQ_zhVLRU1iGt-yvob_l3BMzQY25AFWop7I8aQEpsWNVWt80lkDH2BuW_zf_m4YVzJHYf3A1GQdsETlwESqgJO6aoPQyKXyFnY8UVCZ2ohp69i2RSIAhGBJpKr6F3KF7kHv8QvsJ_zteq6-kGG0s_5nERdY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">Consultoría &amp; Desarrollo</span>
+<h1 class="font-h1 text-h1 text-primary mb-6">Impulsamos el Progreso a través del Conocimiento</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Fundecompe lidera procesos de transformación en el sector público y privado, diseñando estrategias innovadoras que generan impacto social y crecimiento sostenible.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold shadow-lg hover:translate-y-[-2px] transition-all">
+                            Nuestros Programas
+                        </button>
+<button class="border-2 border-secondary text-secondary px-8 py-4 rounded-lg font-bold hover:bg-secondary/5 transition-all">
+                            Ver Trayectoria
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Líneas de Trabajo (Bento Layout) -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-primary mb-4">Líneas de Trabajo</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    Abordamos los desafíos contemporáneos con soluciones especializadas para diferentes motores del desarrollo regional.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Sector Público -->
+<div class="group bg-surface-container-lowest rounded-xl border border-outline-variant p-8 hover:shadow-xl transition-all duration-300">
+<div class="w-16 h-16 bg-primary-container/10 rounded-full flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl">account_balance</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-4">Sector Público</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Asesoría técnica y administrativa para entidades gubernamentales, optimizando la gestión de recursos y la transparencia institucional.
+                    </p>
+<a class="inline-flex items-center text-primary font-bold hover:gap-2 transition-all" href="#">
+                        Explorar área <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Sector Solidario -->
+<div class="group bg-surface-container-lowest rounded-xl border border-outline-variant p-8 hover:shadow-xl transition-all duration-300">
+<div class="w-16 h-16 bg-secondary-container/20 rounded-full flex items-center justify-center mb-6 text-secondary">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">group_work</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-4">Sector Solidario</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Fortalecimiento de cooperativas y fundaciones, promoviendo modelos de economía asociativa y bienestar para sus integrantes.
+                    </p>
+<a class="inline-flex items-center text-secondary font-bold hover:gap-2 transition-all" href="#">
+                        Explorar área <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Turismo -->
+<div class="group bg-surface-container-lowest rounded-xl border border-outline-variant p-8 hover:shadow-xl transition-all duration-300">
+<div class="w-16 h-16 bg-on-tertiary-container/10 rounded-full flex items-center justify-center mb-6 text-tertiary-container">
+<span class="material-symbols-outlined text-4xl">explore</span>
+</div>
+<h3 class="font-h3 text-h3 text-primary mb-4">Turismo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        Desarrollo de proyectos turísticos sostenibles que resaltan la identidad cultural y natural, impulsando la economía local.
+                    </p>
+<a class="inline-flex items-center text-tertiary-container font-bold hover:gap-2 transition-all" href="#">
+                        Explorar área <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Trayectoria (Statistics) -->
+<section class="py-section-gap bg-primary text-on-primary overflow-hidden relative">
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]" data-weight="fill">monitoring</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-section-gap">
+<div>
+<h2 class="font-h2 text-h2 text-primary-fixed mb-6">Una Trayectoria de Resultados Tangibles</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed/80 mb-8">
+                            A lo largo de los años, Fundecompe ha consolidado su posición como socio estratégico para el desarrollo, basando su éxito en la experiencia técnica y el compromiso social.
+                        </p>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="bg-primary-container/30 p-8 rounded-xl backdrop-blur-sm border border-primary-fixed/20">
+<div class="text-h1 font-bold mb-2">15+</div>
+<div class="text-primary-fixed/70 font-label-caps">Años de Experiencia</div>
+</div>
+<div class="bg-primary-container/30 p-8 rounded-xl backdrop-blur-sm border border-primary-fixed/20">
+<div class="text-h1 font-bold mb-2">300+</div>
+<div class="text-primary-fixed/70 font-label-caps">Proyectos Ejecutados</div>
+</div>
+<div class="bg-primary-container/30 p-8 rounded-xl backdrop-blur-sm border border-primary-fixed/20">
+<div class="text-h1 font-bold mb-2">50+</div>
+<div class="text-primary-fixed/70 font-label-caps">Aliados Públicos</div>
+</div>
+<div class="bg-primary-container/30 p-8 rounded-xl backdrop-blur-sm border border-primary-fixed/20">
+<div class="text-h1 font-bold mb-2">12k+</div>
+<div class="text-primary-fixed/70 font-label-caps">Beneficiarios Directos</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Aliados Estratégicos -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin">
+<div class="text-center mb-12">
+<span class="font-label-caps text-label-caps text-secondary uppercase mb-2 block">Confianza</span>
+<h2 class="font-h3 text-h3 text-primary">Aliados Estratégicos</h2>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-16 grayscale opacity-60">
+<div class="h-12 w-40 flex items-center justify-center">
+<img class="max-h-full object-contain" data-alt="A clean and minimal minimalist logo of a modern corporate company, presented in a flat vector style. The logo uses a palette of professional deep blues and light grays, reflecting institutional stability. It is displayed on a clean, light-colored background that emphasizes its professional and modern design. The aesthetic is purely corporate, signifying a partnership with a major institutional entity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7sAj7GYJoQNwNoLMMqpYQiYNinVS1Fmby2J1U1e7JjKQcK9TYdqJ7-HgXSi2-ZwshwkHjTS3uYYVdH3aLbFs9SaaBqLgUNm5IgF38oAd0f0HhmkrNChnS10BI2PtjomI-OttFKBKoJ4VuAQLi9e2P-or22Ro91RUSzU5B-fkpWgyR9nAOk1FMb0-PF4NiUseVyxPapVT1VkMboPV71tZReST0IKi63VNPZRwHVLtyEp-JaiRgK4qc6_MmXOlhuAZJnVNGGhADP40"/>
+</div>
+<div class="h-12 w-40 flex items-center justify-center">
+<img class="max-h-full object-contain" data-alt="A stylized, modern geometric logo representing a technology and innovation firm. The design uses clean lines and a professional blue and teal color scheme. The visual style is high-end corporate, with a minimalist aesthetic that fits into a modern light-mode website. The logo conveys authority, innovation, and long-standing experience in the field of consulting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYwwnCUQFtfCvK53toajqcgNsSvM0Su3Xts1-kH6gx2LaiPnTvo-Im2c-TM5njjgCGBCuRV_V4FQwWh30LcAOn_TADNJ0qd0T_AhcN6DN03y03hQUV86YuRXV8jhZde1Z_paSPnqisa5n8Ce2iKTlUp1-IPSUokMU0V_6LR0Rp4CxdkuLFcpd4wMSm4a9bN5p67xuV4P5VlFrAa4fmWHFk8tQITYQbhhed8jnIN7EDigsR2Q4Z9db8xRD0-0WNWpbMZGv4tQP3Qsk"/>
+</div>
+<div class="h-12 w-40 flex items-center justify-center">
+<img class="max-h-full object-contain" data-alt="A clean, typographic logo of a global foundation, featuring bold and modern sans-serif lettering. The logo is designed with a professional blue palette, incorporating subtle green accents that signify growth and sustainability. The overall look is institutional and established, fitting perfectly within a group of high-level strategic partners for an educational catalyst." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXftgDHelTve0l5OenoLsH6v1RgNXR5HwDmSFK9hzeAv16bmMYOkAneOkoyM9mqCQW_FrCkvm1uZZeGqqayO7DA3Fh9lsTzA2npgARB5Law6ErHzAhxUM5kxZsCglBnkcJRM_DpmU_HqjDA7HRMi7W8Eo7KmdzKvVqmqXxq6gU1KSia02TL3hUEmbKjDoq6zzgMRHKW14OBFia1NsVmOkecMraPj-_HAx9ojcku_u6f0EDUUga43eGpRM0-YaZ4M_lXIwiGXLM0HU"/>
+</div>
+<div class="h-12 w-40 flex items-center justify-center">
+<img class="max-h-full object-contain" data-alt="A sleek and professional logo for a public sector entity, utilizing a sophisticated color palette of navy blue and soft gray. The design is minimalist yet powerful, conveying transparency and governmental trust. It is rendered in a modern vector style suitable for a corporate partner section on a clean, high-end professional services website." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvMK_cFDExcU6ORZrrgm5TqiyIOWb_xkBlZBR3aZ7w06ffMIACXTzz9UBMq2-nHlgVM_hFKnPjfkYqyMNwaVagBhCdaT4I_NN0mzk1WsAiVqzzuvh8tPn22OD4OgibfNK3Nynt6n-lQ7CXq8JlT0AE1IFMMijS7uZkdB9uNkWQ93c2N9mf-4CBjHdwUiWKSV2865J8r_4diVr24vMjcymMuxVTcRqFQGDPNUYsI7WViJ-FxUToCWpi1Od1gEm2hGrC6uCU8wEzWQo"/>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mb-section-gap px-margin">
+<div class="max-w-container-max mx-auto bg-surface-container-high rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-h2 text-h2 text-primary mb-6">¿Listo para transformar su organización?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto">
+                        Nuestro equipo de expertos está preparado para acompañarlo en el diseño y ejecución de estrategias de alto impacto.
+                    </p>
+<button class="bg-primary text-on-primary px-10 py-5 rounded-lg font-bold text-lg hover:shadow-2xl transition-all active:scale-95">
+                        Iniciar Consulta Gratuita
+                    </button>
+</div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full translate-x-32 -translate-y-32"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full -translate-x-24 translate-y-24"></div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-h3 text-h3 font-bold text-primary mb-6">Fundecompe</div>
+<p class="text-on-surface-variant font-body-md">
+                    Comprometidos con el desarrollo integral a través de consultoría especializada y programas de alto impacto social.
+                </p>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-primary mb-6 uppercase tracking-wider text-sm">Navegación</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Sobre Nosotros</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Servicios</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Proyectos</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Contacto</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-primary mb-6 uppercase tracking-wider text-sm">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Políticas de Privacidad</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Preguntas Frecuentes</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-bold text-primary mb-6 uppercase tracking-wider text-sm">Contacto</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">mail</span>
+                        contacto@fundecompe.org
+                    </li>
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">call</span>
+                        Líneas de Atenciòn
+                    </li>
+<li class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                        Sede Principal, Colombia
+                    </li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin py-8 border-t border-outline-variant">
+<p class="text-on-surface-variant font-body-md text-center">
+                © 2024 Fundecompe. Todos los derechos reservados. Consultoría y Desarrollo para el Progreso.
+            </p>
+</div>
+</footer>
+</body></html>

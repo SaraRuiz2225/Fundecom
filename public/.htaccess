@@ -1,0 +1,17 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Serve existing files and directories normally.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# React Router fallback for direct visits and page refreshes.
+RewriteRule ^ index.html [L]
+
+<IfModule mod_headers.c>
+  <Files "env-config.js">
+    Header set Cache-Control "no-store, no-cache, must-revalidate"
+  </Files>
+</IfModule>
