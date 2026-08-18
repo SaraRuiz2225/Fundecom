@@ -19,6 +19,7 @@ export function ProjectsPage() {
             <article key={project.title} className="project-case">
               <div className="project-case__number">{String(index + 1).padStart(2, "0")}</div>
               <div className="project-case__content">
+                {project.image && <img className="project-case__media" src={project.image} alt={project.title} />}
                 <p className="chip">{project.location}</p>
                 <h2>{project.title}</h2>
                 <p className="project-case__client">{project.client}</p>
@@ -27,6 +28,7 @@ export function ProjectsPage() {
                   <div><h3>Solución implementada</h3><p>{project.solution}</p></div>
                   <div className="project-case__result"><h3>Resultados obtenidos</h3><p>{project.result}</p></div>
                 </div>
+                {(project.videoUrl || project.href) && <div className="project-case__links">{project.videoUrl && <a className="text-link" href={project.videoUrl} target="_blank" rel="noreferrer">Ver video <Icon name="arrow" className="text-link__icon" /></a>}{project.href && <a className="text-link" href={project.href} target="_blank" rel="noreferrer">Abrir enlace <Icon name="arrow" className="text-link__icon" /></a>}</div>}
               </div>
             </article>
           ))}

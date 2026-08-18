@@ -8,17 +8,19 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx:1.27-alpine
+FROM node:20-alpine
 
-COPY nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/dist /usr/share/nginx/html
-COPY docker/entrypoint.sh /entrypoint.sh
+WORKDIR /app
+COPY --from=build /app/dist ./dist
+COPY --from=build /app/server ./server
+COPY --from=build /app/src/data ./src/data
+COPY package.json package.json
 
-RUN chmod +x /entrypoint.sh
+ENV PORT=80
+ENV CONTENT_DATA_DIR=/app/data
+ENV NODE_ENV=production
 
-ENV FORMS_ENDPOINT=""
-
+VOLUME ["/app/data"]
 EXPOSE 80
 
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "start"]

@@ -6,3 +6,12 @@ services:
       - "8080:80"
     environment:
       FORMS_ENDPOINT: ${FORMS_ENDPOINT:-}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:?Configure ADMIN_EMAIL en el archivo .env}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Configure ADMIN_PASSWORD en el archivo .env}
+      ADMIN_SESSION_SECRET: ${ADMIN_SESSION_SECRET:?Configure ADMIN_SESSION_SECRET en el archivo .env}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+    volumes:
+      - fundecompe-content:/app/data
+
+volumes:
+  fundecompe-content:

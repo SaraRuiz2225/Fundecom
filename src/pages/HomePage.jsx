@@ -9,6 +9,7 @@ import {
 } from "../data/siteContent";
 import { Icon } from "../components/Icon";
 import { SectionHeading } from "../components/SectionHeading";
+import { PageBlocks } from "../components/PageBlocks";
 
 export function HomePage() {
   return (
@@ -49,6 +50,8 @@ export function HomePage() {
           </aside>
         </div>
       </section>
+
+      <PageBlocks pathname="/" position="top" />
 
       <section className="section">
         <div className="shell">
@@ -124,12 +127,14 @@ export function HomePage() {
           <div className="card-grid card-grid--three">
             {projects.slice(0, 3).map((project) => (
               <article key={project.title} className="surface-card">
+                {project.image && <img className="content-card__media" src={project.image} alt={project.title} />}
                 <p className="chip">{project.location}</p>
                 <h3>{project.title}</h3>
                 <p><strong>{project.client}</strong></p>
                 <p><strong>Reto:</strong> {project.problem}</p>
                 <p><strong>Solución:</strong> {project.solution}</p>
                 <p><strong>Resultado:</strong> {project.result}</p>
+                {project.videoUrl && <a className="text-link" href={project.videoUrl} target="_blank" rel="noreferrer">Ver video <Icon name="arrow" className="text-link__icon" /></a>}
               </article>
             ))}
           </div>

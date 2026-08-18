@@ -70,8 +70,12 @@ export function Footer() {
         </div>
       </div>
       <div className="site-footer__bottom">
-        <div className="shell">
-          © 2026 Fundecompe · NIT 900.344.392-3
+        <div className="shell site-footer__bottom-inner">
+          <span>© 2026 Fundecompe · NIT 900.344.392-3</span>
+          <Link className="admin-access" to="/administracion" title="Acceso para el equipo autorizado">
+            <Icon name="lock" className="admin-access__icon" />
+            Acceso administrativo
+          </Link>
         </div>
       </div>
     </footer>

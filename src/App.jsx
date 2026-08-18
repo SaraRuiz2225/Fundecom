@@ -10,6 +10,7 @@ import { ProgramsPage } from "./pages/ProgramsPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { ServicesPage } from "./pages/ServicesPage";
 import { TeamPage } from "./pages/TeamPage";
+import { AdminPage } from "./pages/AdminPage";
 import { getMaintenanceEnabled } from "./utils/maintenance";
 
 function SiteShell() {
@@ -44,6 +45,7 @@ function SiteShell() {
 export default function App() {
   return (
     <Routes>
+      <Route path="administracion" element={<AdminPage />} />
       <Route path="emergency" element={<EmergencyPage />} />
       <Route element={<SiteShell />}>
         <Route index element={<HomePage />} />

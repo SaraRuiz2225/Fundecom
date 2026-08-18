@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { DynamicExperience } from "./DynamicExperience";
+import { PageBlocks } from "./PageBlocks";
 
 export function Layout({ children }) {
   const { pathname } = useLocation();
@@ -23,9 +25,11 @@ export function Layout({ children }) {
 
   return (
     <>
+      <DynamicExperience />
       <Header />
       <main className="page">
         {children ?? <Outlet />}
+        <PageBlocks pathname={pathname} position="bottom" />
       </main>
       <Footer />
     </>

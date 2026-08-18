@@ -27,6 +27,7 @@ export function ProgramsPage() {
           <div className="card-grid card-grid--two">
             {programs.map((program) => (
               <article key={program.title} className="surface-card">
+                {program.image && <img className="content-card__media" src={program.image} alt={program.title} />}
                 <div className="icon-badge">
                   <Icon name={program.icon} className="icon-badge__icon" />
                 </div>
@@ -35,6 +36,7 @@ export function ProgramsPage() {
                 <p>{program.description}</p>
                 <p><strong>{program.goal}</strong></p>
                 {program.href && <a className="text-link" href={program.href} target="_blank" rel="noreferrer">Visitar redsaber.co</a>}
+                {program.videoUrl && <a className="text-link" href={program.videoUrl} target="_blank" rel="noreferrer">Ver video <Icon name="arrow" className="text-link__icon" /></a>}
               </article>
             ))}
           </div>

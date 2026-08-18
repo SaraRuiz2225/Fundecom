@@ -28,6 +28,10 @@ Rediseño institucional de Fundecompe en React + Vite, basado en los mockups de 
 
 - `VITE_FORMS_ENDPOINT`: útil para desarrollo local con `npm run dev`.
 - `FORMS_ENDPOINT`: útil en Docker o despliegues con `nginx`, porque se inyecta al iniciar el contenedor.
+- `ADMIN_EMAIL`: correo autorizado para el panel privado.
+- `ADMIN_PASSWORD`: contraseña segura del panel.
+- `ADMIN_SESSION_SECRET`: cadena aleatoria larga utilizada para proteger la sesión.
+- `COOKIE_SECURE`: usar `true` cuando el sitio público funcione mediante HTTPS.
 
 Ejemplo:
 
@@ -42,6 +46,22 @@ docker compose up --build
 ```
 
 La app quedará disponible en `http://localhost:8080`.
+
+## Panel administrativo
+
+El panel está disponible en `/administracion`. Permite actualizar el contenido de
+las secciones existentes, subir imágenes y agregar enlaces o videos sin acceso al
+código ni a la estructura visual. Los cambios se guardan en el volumen persistente
+`fundecompe-content`; antes de cada publicación se conserva una copia de respaldo.
+
+La opción **Bloques de página** funciona como un constructor seguro. Permite crear,
+ordenar, ocultar o eliminar bloques de texto, texto con imagen, video, galería y
+banner con botón, y decidir en cuál página se muestran. Los videos admiten enlaces
+de YouTube/Vimeo o archivos MP4/WebM de hasta 30 MB.
+
+Antes de iniciar Docker, copie `.env.example` como `.env` y reemplace las tres
+credenciales administrativas de ejemplo. En producción, publique el sitio detrás
+de HTTPS para proteger el acceso y la sesión, y configure `COOKIE_SECURE=true`.
 
 ## Flujo recomendado para formularios
 

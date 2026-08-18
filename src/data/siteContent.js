@@ -134,6 +134,10 @@ export const faqs = [
   { question: "¿Dónde trabaja Fundecompe?", answer: "Tenemos experiencia en 18 departamentos y trabajamos con cooperativas, entidades públicas, empresas, emprendedores y comunidades en Colombia." },
 ];
 
+// Bloques opcionales creados desde el panel. Se mantienen tipados para que el
+// administrador pueda ampliar las páginas sin modificar código ni estilos.
+export const pageBlocks = [];
+
 export const privacySummary = [
   "Fundecompe, bajo la responsabilidad de Juan Carlos Ramírez, Director Ejecutivo, trata los datos enviados en el formulario exclusivamente para responder solicitudes y realizar seguimiento interno.",
   "Los datos no se comparten con terceros. Fundecompe no recopila datos de menores de edad a través de este sitio.",
@@ -147,3 +151,35 @@ export const footerLinks = {
     { label: "Contacto", href: "/contacto" },
   ],
 };
+
+const editableContent = {
+  contactInfo,
+  brandAssets,
+  siteImages,
+  socialLinks,
+  primaryNavigation,
+  homeHighlights,
+  homeMetrics,
+  partners,
+  teamMembers,
+  teamGallery,
+  serviceCategories,
+  services,
+  programs,
+  projects,
+  faqs,
+  pageBlocks,
+};
+
+export function hydrateSiteContent(content = {}) {
+  Object.entries(editableContent).forEach(([key, target]) => {
+    const incoming = content[key];
+    if (!incoming) return;
+
+    if (Array.isArray(target) && Array.isArray(incoming)) {
+      target.splice(0, target.length, ...incoming);
+    } else if (!Array.isArray(target) && typeof incoming === "object") {
+      Object.assign(target, incoming);
+    }
+  });
+}
